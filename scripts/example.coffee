@@ -75,9 +75,8 @@ module.exports = (robot) ->
   #
   #
     robot.respond /report/, (res) ->
-      robot.messageRoom "mods", "new report"
-      console.log(res)
-      res.send 'Reported'
+      robot.messageRoom 'mods', 'From ' + res.user.name + ': ' + res.message.text
+      res.send 'Thanks, someone should help you soon.'
   #
   # robot.error (err, res) ->
   #   robot.logger.error "DOES NOT COMPUTE"
