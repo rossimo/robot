@@ -75,7 +75,7 @@ module.exports = (robot) ->
   #
   #
     robot.respond /report/, (res) ->
-      robot.messageRoom 'mods', 'From ' + res.user.name + ': ' + res.message.text
+      robot.messageRoom 'mods', 'From ' + res.message.user.name + ': ' + res.message.text
       res.send 'Thanks, someone should help you soon.'
   #
   # robot.error (err, res) ->
