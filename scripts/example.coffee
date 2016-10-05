@@ -76,6 +76,7 @@ module.exports = (robot) ->
   #
     robot.respond /report/, (res) ->
       robot.messageRoom "mods", "new report"
+      console.log(res)
       res.send 'Reported'
   #
   # robot.error (err, res) ->
